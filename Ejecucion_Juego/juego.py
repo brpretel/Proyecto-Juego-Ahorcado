@@ -2,9 +2,10 @@ import random
 import time
 import os
 
+ruta = "/mnt/c/Users/Usuario/OneDrive/Escritorio/Lenguajes Programacion/Proyectos GIT/Proyecto Ahorcado/Ejecucion_Juego/palabras.txt"
 #Funcion para traer al juego las palabras del archivo (palabras.txt)
 def palabra_juego():
-    with open("palabras.txt","r",encoding="utf-8") as p:
+    with open(ruta,"r",encoding="utf-8") as p:
         lista = [palabra.lower().strip() for palabra in p]
         palabra = random.choice(lista)
         return palabra
