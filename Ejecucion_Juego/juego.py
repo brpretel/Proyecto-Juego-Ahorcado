@@ -16,7 +16,7 @@ def tablero(letra,palabra,palabra_jugador,vidas,letras):
         letra = input("Escriba una letra: ")
         try:
             if len(letra) == 0 or len(letra) >1 or letra in letras:
-                raise ValueError("No se permiten numeros, combinacion de caracteres, espacios vacios o repetir letras!!\n")
+                raise ValueError("No se permiten numeros, combinacion de caracteres, espacios vacios o repaetir letras!!\n")
         except ValueError as v:
             print(v)
 
@@ -35,8 +35,8 @@ def tablero(letra,palabra,palabra_jugador,vidas,letras):
 
         elif vidas == 1:
             print("\nLo siento pero haz perdido intentalo de nuevo")
-            time.sleep(3)
-            os.system("cls")
+            time.sleep(1)
+            os.system("clear")
             return run()
         else:
             vidas -=1
